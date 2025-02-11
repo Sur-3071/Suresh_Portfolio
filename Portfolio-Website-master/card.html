@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Scrolling Certifications</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #cardouter {
+            background-color:green;
+            border-radius: 15px;
+            padding: 20px;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        #cardinner {
+            display: flex;
+            gap: 50px;
+            width: max-content;
+            animation: scroll 18s linear infinite;
+        }
+
+        /* Infinite Scrolling Animation */
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Pause scrolling on hover */
+        #cardouter:hover #cardinner {
+            animation-play-state: paused;
+        }
+
+        .card {
+            background-color:rgb(122, 132, 138);
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 300px;
+            height: 250px;
+            border-radius: 15px;
+        }
+
+        .profile-btn {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            padding: 10px 15px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .profile-btn:hover {
+            background-color: #0056b3;
+        }
+        h2{
+            margin-bottom: 60px;
+            font-size: 34px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cardouter">
+        <h2>Platforms</h2>
+        <div id="cardinner">
+            <div class="card">
+                <img class="avatar" src="assets/img/leetcode.png" alt="User Avatar">
+                <h2 class="name">Leet Code</h2>
+                <a href="https://leetcode.com/u/sur_3071/" target="_blank" class="profile-btn">View Profile</a>
+            </div>
+            <div class="card">
+                <img class="avatar" src="assets/img/codechef.jpg" alt="User Avatar">
+                <h2 class="name">Code Chef</h2>
+                <a href="https://www.codechef.com/users/ramlal567sures" target="_blank" class="profile-btn">View Profile</a>
+            </div>
+            <div class="card">
+                <img class="avatar" src="assets/img/hackerrank.jpg" alt="User Avatar">
+                <h2 class="name">Hacker Rank</h2>
+                <a href="https://www.hackerrank.com/Sur3071" target="_blank" class="profile-btn">View Profile</a>
+            </div>
+            <div class="card">
+                <img class="avatar" src="assets/img/git.png" alt="User Avatar">
+                <h2 class="name">GitHub</h2>
+                <a href="https://github.com/Sur-3071/" target="_blank" class="profile-btn">View Profile</a>
+            </div>
+            <div class="card">
+                <img class="avatar" src="assets/img/linkedin.png" alt="User Avatar">
+                <h2 class="name">Linked In</h2>
+                <a href="inkedin.com/in/ramlalsuresh-kone-1587a3235/" target="_blank" class="profile-btn">View Profile</a>
+            </div>
+            <!-- Duplicate Cards for Seamless Infinite Scroll -->
+            <div class="card">
+                <img class="avatar" src="assets/img/leetcode.png" alt="User Avatar">
+                <h2 class="name">Leet Code</h2>
+                <a href="https://leetcode.com/u/sur_3071/" target="_blank" class="profile-btn">View Profile</a>
+            </div>
+            <div class="card">
+                <img class="avatar" src="assets/img/codechef.jpg" alt="User Avatar">
+                <h2 class="name">Code Chef</h2>
+                <a href="https://www.codechef.com/users/ramlal567sures" target="_blank" class="profile-btn">View Profile</a>
+            </div>
+            <div class="card">
+                <img class="avatar" src="assets/img/hackerrank.jpg" alt="User Avatar">
+                <h2 class="name">Hacker Rank</h2>
+                <a href="https://www.hackerrank.com/Sur3071" target="_blank" class="profile-btn">View Profile</a>
+            </div>
+            <div class="card">
+                <img class="avatar" src="assets/img/git.png" alt="User Avatar">
+                <h2 class="name">GitHub</h2>
+                <a href="https://github.com/Sur-3071/" target="_blank" class="profile-btn">View Profile</a>
+            </div>
+            <div class="card">
+                <img class="avatar" src="assets/img/linkedin.png" alt="User Avatar">
+                <h2 class="name">Linked In</h2>
+                <a href="inkedin.com/in/ramlalsuresh-kone-1587a3235/" target="_blank" class="profile-btn">View Profile</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
