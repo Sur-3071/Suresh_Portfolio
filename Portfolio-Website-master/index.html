@@ -168,15 +168,15 @@
             </div>
 
             <div>
-              <span class="about__info-title">05+</span>
-              <span class="about__info-name">Months <br />experience</span>
+              <span class="about__info-title" id="exp"></span>
+              <span class="about__info-name">Years <br />experience</span>
             </div>
 
 
           </div>
 
           <div class="about__buttons">
-            <a download="" href="assets\MyCV.pdf" class="button button--flex">
+            <a download="" href="assets\Experience Resume Final.pdf" class="button button--flex">
               Download CV<i class="fas fa-download button__icon"></i>
             </a>
           </div>
@@ -1167,5 +1167,30 @@
   <script src="https://kit.fontawesome.com/2205d59d52.js" crossorigin="anonymous"></script>
   <script src="assets/ptj.js"></script>
 </body>
+<script>
+// Function to calculate difference in years (decimal)
+function dateDiffInYears(startDate, endDate) {
+  let diffTime = endDate - startDate; // difference in ms
+  let diffDays = diffTime / (1000 * 60 * 60 * 24); // convert ms → days
+  let diffYears = (diffDays / 365.25)+0.3; // include leap year approx
+  return diffYears.toFixed(2); // round to 2 decimals
+}
+
+// Today’s date from system
+let today = new Date();  
+
+// Given date
+let givenDate = new Date(2025, 1, 6); // Feb 6, 2025
+
+// Difference between Feb 6, 2025 → Today
+let diff1 = dateDiffInYears(givenDate, today);
+
+// Add 3 months to Feb 6, 2025
+let plus3Months = new Date(givenDate);
+plus3Months.setMonth(plus3Months.getMonth() + 3);
+
+document.getElementById("exp").innerHTML=diff1;
+
+</script>
 
 </html>
