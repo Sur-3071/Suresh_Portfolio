@@ -108,7 +108,7 @@
                       165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
                       129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                      -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                <image class="home__blob-img" x="-80" y="-50" xlink:href="assets/img/Pro.jpg" />
+                <image class="home__blob-img" x="-70" y="-60" xlink:href="assets/img/Pro.jpg" />
               </g>
             </svg>
           </div>
@@ -176,7 +176,7 @@
           </div>
 
           <div class="about__buttons">
-            <a download="" href="assets\Experience Resume Final.pdf" class="button button--flex">
+            <a download="" href="assets\Experience Resume Main.pdf" class="button button--flex">
               Download CV<i class="fas fa-download button__icon"></i>
             </a>
           </div>
@@ -1171,9 +1171,11 @@
 <script>
 // Function to calculate difference in years (decimal)
 function dateDiffInYears(startDate, endDate) {
+  // alert(endDate);
   let diffTime = endDate - startDate; // difference in ms
-  let diffDays = diffTime / (1000 * 60 * 60 * 24); // convert ms → days
-  let diffYears = (diffDays / 365.25)+0.3; // include leap year approx
+  let diffDays = (diffTime / (1000 * 60 * 60 * 24))+92; // convert ms → days
+  // alert(diffDays);
+  let diffYears = ((diffDays / 30)/12); // include leap year approx
   return diffYears.toFixed(2); // round to 2 decimals
 }
 
